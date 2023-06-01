@@ -49,7 +49,7 @@ WITH conversation AS (
     usr.Name
   FROM Messages msg
   JOIN User usr on usr.UserID = msg.UserIDSender OR usr.UserID = msg.UserIDRecipient // use Union instead?
-  ORDER BY msg.DateSent DESC
+  ORDER BY msg.DateSent
 ),
 conversation_most_messages AS (
   SELECT 
